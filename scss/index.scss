@@ -13,12 +13,13 @@ body {
 div#dogApiFrame {
 	width: 60%;
 	margin: 5vh auto;
-	background: green;
+	background: transparent;
 	height: 90vh;
 	align-items: center;
 	justify-content: space-between;
 	position: relative;
 	display: none;
+	user-select: none;
 
 	&.active {
 		display: flex;
@@ -34,7 +35,7 @@ div#dogApiFrame {
 		z-index: 99;
 		font-size: 5rem;
 		font-weight: 700;
-		background-color: rgba(150 150 150 / 0.3);
+		background-color: rgba(150 150 150 / 0.5);
 		padding: 0 25px;
 		border-radius: 50%;
 		transition: all 0.3s ease-out;
@@ -46,7 +47,7 @@ div#dogApiFrame {
 		}
 		&:hover {
 			cursor: pointer;
-			background-color: rgba(150 150 150 / 0.7);
+			background-color: rgba(150 150 150 / 0.9);
 		}
 	}
 }
