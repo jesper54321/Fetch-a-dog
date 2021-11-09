@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+}
+
+div#dogApiFrame {
+  width: 60%;
+  margin: 5vh auto;
+  background: green;
+  height: 90vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  display: none;
+}
+div#dogApiFrame.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+div#dogApiFrame > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+div#dogApiFrame > div.arrow {
+  position: absolute;
+  z-index: 99;
+  font-size: 5rem;
+  font-weight: 700;
+  background-color: rgba(150, 150, 150, 0.3);
+  padding: 0 25px;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+div#dogApiFrame > div.arrow.arrow_right {
+  right: 20px;
+}
+div#dogApiFrame > div.arrow.arrow_left {
+  left: 20px;
+}
+div#dogApiFrame > div.arrow:hover {
+  cursor: pointer;
+  background-color: rgba(150, 150, 150, 0.7);
+}

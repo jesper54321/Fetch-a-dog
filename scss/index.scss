@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: grey;
+}
+
+div#dogApiFrame {
+	width: 60%;
+	margin: 5vh auto;
+	background: green;
+	height: 90vh;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	display: none;
+
+	&.active {
+		display: flex;
+	}
+
+	> img {
+		width: 100%;
+		object-fit: cover;
+		height: 100%;
+	}
+	> div.arrow {
+		position: absolute;
+		z-index: 99;
+		font-size: 5rem;
+		font-weight: 700;
+		background-color: rgba(150 150 150 / 0.3);
+		padding: 0 25px;
+		border-radius: 50%;
+		transition: all 0.3s ease-out;
+		&.arrow_right {
+			right: 20px;
+		}
+		&.arrow_left {
+			left: 20px;
+		}
+		&:hover {
+			cursor: pointer;
+			background-color: rgba(150 150 150 / 0.7);
+		}
+	}
+}
